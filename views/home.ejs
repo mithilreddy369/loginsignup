@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+    <link rel="stylesheet" type="text/css" href="public/home.css">
+</head>
+<body>
+    <nav>
+        <div class="navbar">
+            <div class="logo">
+                <a href="/">mithilreddy369</a>
+            </div>
+            <div class="time">
+                <span id="current-time"></span>
+            </div>
+            <div class="logout">
+                <a href="/logout">Logout</a>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="message-container">
+            <p>Sorry for the inconvenience. The website is under maintenance. Please come back again later to check for updates.</p>
+        </div>
+        <div class="user-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Mobile</th>
+                        <th>Email</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each users}}
+                    <tr>
+                        <td>{{this.name}}</td>
+                        <td>{{this.mobile}}</td>
+                        <td>{{this.email}}</td>
+                    </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="public/home.js"></script>
+</body>
+</html>
